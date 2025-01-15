@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="style.css"> <!-- Vinculamos los estilos -->
+</head>
+<body>
+    <div id="calendar">
+        <header id="calendar-header">
+            <button id="prev">&lt</button>
+            <span id="month-year"></span>
+            <button id="next">&gt</button>
+        </header>
+        <table id="days">
+            <thead>
+                <tr>
+                    <th><h6>Lun</h6></th>
+                    <th><h6>Mar</h6></th>
+                    <th><h6>Mié</h6></th>
+                    <th><h6>Jue</h6></th>
+                    <th><h6>Vie</h6></th>
+                    <th><h6>Sáb</h6></th>
+                    <th><h6>Dom</h6></th>
+                </tr>
+            </thead>
+            <tbody id="number-days">
+                <!-- Aquí se insertarán los días del mes -->
+            </tbody>
+        </table>
+    </div>
+    <script src="main.js" type="module"></script> <!-- Vinculamos el archivo JS -->
+</body>
+</html>
