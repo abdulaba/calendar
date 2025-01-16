@@ -8,7 +8,7 @@ const currentDate = new Date()
 let month = currentDate.getMonth()
 let year = currentDate.getFullYear();
 
-// Obtener elementos del html
+// Obtener elementos del DOM
 const monthYear = document.getElementById("month-year");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
@@ -46,6 +46,8 @@ const createDaysOfTheMonths = () => {
     }
 }
 
+// ACtualizar calendario
+
 const updateCalendar = () => {
     insertDateIntoDom();
     document.querySelector('tbody').innerHTML = '';
@@ -53,7 +55,7 @@ const updateCalendar = () => {
 }
 
 
-// Funcion para avanzar mes y annio
+// Funcion para avanzar mes y año
 const nextMonth = () => {
     month++;
     if (month > 11) {
@@ -64,7 +66,7 @@ const nextMonth = () => {
 }
 
 
-// Funcion para retroceder mes y annio
+// Funcion para retroceder mes y año
 const prevMonth = () => {
     month--;
     if (month < 0) {
@@ -76,7 +78,7 @@ const prevMonth = () => {
 
 
 
-// Insertar mes y annio en el DOM
+// Insertar mes y año en el DOM
 const insertDateIntoDom = () => {
     monthYear.textContent = `${months[month]} ${year}`
 }
@@ -87,5 +89,6 @@ const insertDateIntoDom = () => {
 prev.addEventListener("click", prevMonth);
 next.addEventListener("click", nextMonth)
 
+// carga inicial
 insertDateIntoDom();
 createDaysOfTheMonths();
