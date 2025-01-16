@@ -23,10 +23,8 @@ const getDays = () => {
 // Funcion para crear dias del mes
 const createDaysOfTheMonths = () => {
     const daysOfTheMonth = getDays();
-    console.log(daysOfTheMonth)
     let firstDayOfTheWeek = new Date(year, month, 1).getDay();
     if (firstDayOfTheWeek == 0) firstDayOfTheWeek = 7
-    console.log(firstDayOfTheWeek)
     let counter = 1;
     for(let row = 1; row <= 6; row++) {
         const tr = document.createElement("tr");
